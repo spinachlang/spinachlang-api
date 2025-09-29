@@ -1,12 +1,16 @@
+"""CLI entry point"""
+
+import os
+
 import argparse
 import uvicorn
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
 def main():
+    """CLI entry point"""
     parser = argparse.ArgumentParser(description="Run the SpinachLang API")
     parser.add_argument("--host", default=os.getenv("HOST", "127.0.0.1"))
     parser.add_argument("--port", type=int, default=int(os.getenv("PORT", "8000")))
@@ -19,4 +23,3 @@ def main():
         port=args.port,
         reload=args.reload,
     )
-

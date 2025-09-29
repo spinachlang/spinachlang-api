@@ -1,0 +1,1 @@
+"""Spinachlang package"""

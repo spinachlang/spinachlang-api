@@ -1,6 +1,5 @@
 """Spinach API entry point"""
 
-import uvicorn
 from dotenv import load_dotenv
 from .cli import main
 
